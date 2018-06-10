@@ -16,4 +16,13 @@ curl http://172.17.0.2
 docker run --rm -v $(pwd)/:/usr/share/nginx/html/  --name webserver -p 8080:80   garr-workshop/ui:1.0
 ```
 
-TODO: browsersync
+
+## browsersync
+
+```bash
+docker build -f Dockerfile-browsersync -t garr-workshop/ui:browsersync .
+
+docker run -v $(pwd):/app/:ro -p 3000:3000 --rm garr-workshop/ui:browsersync
+
+sed -i s/Temperature/Temperatura/g index.html
+```
