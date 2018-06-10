@@ -154,7 +154,7 @@ under the License.
       <id>Francesco</id>
       <mirrorOf>*</mirrorOf>
       <name>Francesco Repo</name>
-      <url>http://192.168.1.37:8000/</url>
+      <url>http://francesco:8000/</url>
     </mirror>
   </mirrors>
 
