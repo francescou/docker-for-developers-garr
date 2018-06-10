@@ -1,9 +1,0 @@
-FROM node:8-alpine
-
-RUN npm install  -g browser-sync
-
-WORKDIR /app/
-
-CMD browser-sync start --server --files "*.html, css/*.css"
-
-EXPOSE 3000
