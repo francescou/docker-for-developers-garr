@@ -1,5 +1,7 @@
 FROM maven:3-alpine as maven
 
+#COPY settings.xml  /usr/share/maven/conf/settings.xml
+
 WORKDIR /app/
 COPY pom.xml .
 
