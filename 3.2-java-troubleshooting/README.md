@@ -3,7 +3,7 @@ docker run --rm --name redis -p 6379:6379 redis:alpine
 ```
 
 ```bash
-docker build -t garr-workshop/thermostat-trouble:1.0 .
+docker build --tag garr-workshop/thermostat-trouble:1.0 .
 ```
 
 ```bash

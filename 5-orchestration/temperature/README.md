@@ -1,3 +1,3 @@
 ```
-docker build -t garr-workshop/temperature:1.0 .
+docker build --tag garr-workshop/temperature:1.0 .
 ```
