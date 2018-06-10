@@ -5,5 +5,5 @@ docker build --tag garr-workshop/humidity:1.0 .
 
 docker run --rm --link database:database --env MYSQL_HOST=database --env MYSQL_PASSWORD=pww --name php-webapp --publish 8080:80  garr-workshop/humidity:1.0
 
-docker exec -ti $(docker ps |  grep -w mysql | cut -d ' ' -f1) mysql -ppww
+docker exec --tty --interactive $(docker ps |  grep -w mysql | cut -d ' ' -f1) mysql -ppww
 ```
