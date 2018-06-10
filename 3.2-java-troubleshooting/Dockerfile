@@ -26,7 +26,7 @@ USER nobody
 
 EXPOSE 8080
 
-ENV JAVA_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n -Xmx128m
+ENV JAVA_OPTS -Xmx256m
 
 CMD java ${JAVA_OPTS} -jar /app.jar
 

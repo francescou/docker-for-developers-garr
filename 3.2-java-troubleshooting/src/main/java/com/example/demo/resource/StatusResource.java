@@ -26,7 +26,7 @@ public class StatusResource {
     }
 
 
-    @Scheduled(initialDelay = 60_000, fixedDelay = 100_000)
+    @Scheduled(initialDelay = 30_000, fixedDelay = 100_000)
     public void memory() {
 
 
