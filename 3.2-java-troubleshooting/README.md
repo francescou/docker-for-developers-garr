@@ -1,5 +1,5 @@
 ```bash
-docker run --rm --name redis -p 6379:6379 redis:alpine
+docker run --rm --name redis --publish 6379:6379 redis:alpine
 ```
 
 ```bash
@@ -9,7 +9,7 @@ docker build --tag garr-workshop/thermostat-trouble:1.0 .
 ```bash
 docker run --link redis:redis \
   --name webapp \
-  -p 8080:8080 \
+  --publish 8080:8080 \
   -e REDIS_HOST=redis \
   -m 300m \
   --rm \
