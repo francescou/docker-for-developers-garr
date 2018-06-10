@@ -5,7 +5,7 @@ docker run --rm --name redis redis:alpine --port 7777
 ```
 
 ```
-docker run --tty --interactive  --rm --link redis:redis  alpine  sh
+docker run --name troubleshooting-5 --tty --interactive  --rm --link redis:redis  alpine  sh
 ```
 
 ```bash

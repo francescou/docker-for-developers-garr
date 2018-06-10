@@ -22,7 +22,7 @@ docker run --rm --volume $(pwd)/:/usr/share/nginx/html/  --name webserver --publ
 ```bash
 docker build --file Dockerfile-browsersync --tag garr-workshop/ui:browsersync .
 
-docker run --volume $(pwd):/app/:ro --publish 3000:3000 --rm garr-workshop/ui:browsersync
+docker run --name browsersync --volume $(pwd):/app/:ro --publish 3000:3000 --rm garr-workshop/ui:browsersync
 
 sed -i s/Temperature/Temperatura/g index.html
 ```
