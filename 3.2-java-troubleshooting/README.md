@@ -10,8 +10,8 @@ docker build --tag garr-workshop/thermostat-trouble:1.0 .
 docker run --link redis:redis \
   --name webapp \
   --publish 8080:8080 \
-  -e REDIS_HOST=redis \
-  -m 300m \
+  --env REDIS_HOST=redis \
+  --memory 300m \
   --rm \
   garr-workshop/thermostat-trouble:1.0
 ```
