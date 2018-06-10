@@ -20,7 +20,7 @@ docker run --rm --volume $(pwd)/:/usr/share/nginx/html/  --name webserver --publ
 ## browsersync
 
 ```bash
-docker build -f Dockerfile-browsersync --tag garr-workshop/ui:browsersync .
+docker build --file Dockerfile-browsersync --tag garr-workshop/ui:browsersync .
 
 docker run --volume $(pwd):/app/:ro --publish 3000:3000 --rm garr-workshop/ui:browsersync
 
