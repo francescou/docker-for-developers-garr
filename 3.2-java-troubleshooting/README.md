@@ -12,6 +12,7 @@ docker run --link redis:redis \
   --publish 8080:8080 \
   --env REDIS_HOST=redis \
   --memory 300m \
-  --rm \
   garr-workshop/thermostat-trouble:1.0
 ```
+
+# provare con memory 500
