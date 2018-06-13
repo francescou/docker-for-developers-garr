@@ -45,9 +45,3 @@ services:
     - 80:80
     - 8080:8080
     command: '-L debug --docker --docker.swarmMode --docker.domain=traefik --docker.watch --api'
-
-
-#networks: {}
-#volumes: {}
-
-# TODO: user, healthcheck, custom networks, constraints?
