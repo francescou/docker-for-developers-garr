@@ -15,7 +15,6 @@ nc -vvv redis 6379
 #sent 0, rcvd 0
 
 
-```bash
 nc -vvv redis 7777
 
 #redis (172.17.0.2:7777) open
