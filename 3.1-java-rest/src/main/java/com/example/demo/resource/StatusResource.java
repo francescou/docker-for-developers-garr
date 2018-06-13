@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.PostConstruct;
 
 @RestController
-@RequestMapping("/api/thermostat")
+@RequestMapping("/")
 public class StatusResource {
 
     private StatusRepository statusRepository;
@@ -23,7 +23,7 @@ public class StatusResource {
         if (statusRepository.findAll().size() == 0) {
             Status status = new Status();
             status.setValue(20);
-
+            status.setId(123);
             statusRepository.save(status);
         }
     }
@@ -40,7 +40,6 @@ public class StatusResource {
 
         Status status = statusRepository
                 .findAll()
-                .values()
                 .stream()
                 .findFirst()
                 .get();

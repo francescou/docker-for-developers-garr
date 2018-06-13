@@ -1,9 +1,14 @@
 ```bash
-docker run --rm --name redis --publish 6379:6379 redis:alpine
+docker run --rm -p 3306:3306  -e MYSQL_ROOT_PASSWORD=springrootpw \
+  -e MYSQL_DATABASE=status  -e MYSQL_USER=spring -e MYSQL_PASSWORD=springpw \
+  --name mysql   mysql:5.6
 ```
 
 ```bash
 
-docker build --add-host francesco:192.168.1.123 --tag garr-workshop/thermostat:1.0 .
-docker run --link redis:redis --name webapp --publish 8080:8080 --rm garr-workshop/thermostat:1.0
+docker build --tag garr-workshop/java:1.0 .
+
+docker run --link mysql:mysql-db --name webapp --publish 8080:8080 --rm garr-workshop/java:1.0
+
+curl http://localhost:8080
 ```
