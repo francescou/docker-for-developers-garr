@@ -38,7 +38,7 @@ services:
     environment:
     - MYSQL_ROOT_PASSWORD=pww
   traefik:
-    image: traefik
+    image: traefik:1.6-alpine
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock
     ports:
